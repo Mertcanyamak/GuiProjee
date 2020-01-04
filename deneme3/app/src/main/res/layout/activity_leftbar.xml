@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@mipmap/user12_foreground" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+
+        app:srcCompat="@mipmap/menu" />
+
+    <Button
+        android:id="@+id/mainmenubar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="#D7EEFF41"
+        android:text="Mainmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dailybar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#0FA857"
+        android:text="Daily"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/mainmenubar" />
+
+    <Button
+        android:id="@+id/progressbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#A22887"
+        android:text="Progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/dailybar" />
+
+    <Button
+        android:id="@+id/goalsbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#B5513F"
+        android:text="Goals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/progressbar" />
+
+    <Button
+        android:id="@+id/nutritionbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#536DFE"
+        android:text="Nutrition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/goalsbar" />
+
+    <Button
+        android:id="@+id/waterreqbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#3FB541"
+        android:text="Water Requirement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/nutritionbar" />
+
+    <Button
+        android:id="@+id/receipbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D2E2081D"
+        android:text="Receap, Meals and Foods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/waterreqbar" />
+
+    <Button
+        android:id="@+id/settingsbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#E233333F"
+        android:text="Settings"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receipbar" />
+
+    <Button
+        android:id="@+id/logoutbar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#69F0AE"
+        android:text="Logout"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsbar"
+        app:layout_constraintVertical_bias="0.123" />
+</androidx.constraintlayout.widget.ConstraintLayout>
