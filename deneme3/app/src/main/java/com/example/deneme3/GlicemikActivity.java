@@ -49,14 +49,7 @@ public class GlicemikActivity extends AppCompatActivity {
             }
         });
 
-        cal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CaloriesActivity.class);
-                startActivity(intent);
 
-            }
-        });
 
         nut.setOnClickListener(new View.OnClickListener() {
             @Override

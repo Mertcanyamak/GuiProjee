@@ -24,13 +24,7 @@ public class CaloriesActivity  extends AppCompatActivity {
         menu = findViewById(R.id.imageButton6);
 
 
-        cal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CaloriesActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 
