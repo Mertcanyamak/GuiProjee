@@ -11,35 +11,58 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+
 public class welcome1Activity extends AppCompatActivity {
 
     TextView textView3 , textView5;
-    EditText editText7,editText8,editText9,editText10;
+    EditText height,goalWeight,location,age;
     Button button;
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+    private FirebaseUser firebaseUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome1);
 
+        mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
+        firebaseUser = mAuth.getCurrentUser();
+
         textView3 = findViewById(R.id.textView3);
         textView5 = findViewById(R.id.textView5);
-        editText7 = findViewById(R.id.editText7);
-        editText8 = findViewById(R.id.editText8);
-        editText9 = findViewById(R.id.editText9);
-        editText10 = findViewById(R.id.editText10);
+        height = findViewById(R.id.height);
+        age = findViewById(R.id.age);
+        location = findViewById(R.id.location);
+        goalWeight = findViewById(R.id.goalWeight);
         button = findViewById(R.id.go);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Text7 = editText7.getText().toString();
-                String Text8 = editText8.getText().toString();
-                String Text9 = editText9.getText().toString();
-                String Text10 = editText10.getText().toString();
+                String height1 = height.getText().toString();
+                String age1 = age.getText().toString();
+                String location1 = location.getText().toString();
+                String goalWeight1 = goalWeight.getText().toString();
 
-                if (TextUtils.isEmpty(Text7) || TextUtils.isEmpty(Text8) || TextUtils.isEmpty(Text9) || TextUtils.isEmpty(Text10)) {
+                if (TextUtils.isEmpty(height1) || TextUtils.isEmpty(age1) || TextUtils.isEmpty(location1) || TextUtils.isEmpty(goalWeight1)) {
                     Toast.makeText(welcome1Activity.this, "Tüm Boşlukları Doldurun", Toast.LENGTH_SHORT).show();
                 }else {
+                    HashMap<String, Object> userMap = new HashMap<>();
+                    userMap.put("height", height1);
+                    userMap.put("age", age1);
+                    userMap.put("location", location1);
+                    userMap.put("goalWeight", goalWeight1);
+                    myRef.child("UserInfo").child(firebaseUser.getUid()).updateChildren(userMap);
+
                     Intent intent = new Intent(welcome1Activity.this, welcomeActivity2.class);
                     startActivity(intent);
                 }
